@@ -13,7 +13,7 @@ class Solution {
 public:
    TreeNode* findNodeInBST(TreeNode* root, int target) {
 
-    // base case
+
     if(root == NULL) {
         return NULL;
     }
@@ -21,10 +21,8 @@ public:
     if(root->val == target)
         return root;
 
-    // assuming there are only unique values in tree
 
     if(target > root->val) {
-        // right subtree me search karo
         return findNodeInBST(root->right, target);
     }
     else {
